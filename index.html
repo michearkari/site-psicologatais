@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tais Eduarda — Psicóloga | Terapia Online</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<meta name="description" content="Tais Eduarda, psicóloga. Terapia online para adultos que buscam se entender melhor, cuidar da autoestima e viver relações mais saudáveis." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --cream:#F7F2E9; --cream-2:#EFE7D8; --ink:#2B2A26; --ink-soft:#5C5950;
+  --sage:#3E544A; --sage-d:#2C3D35; --gold:#C2A05B; --gold-d:#9C7E3E;
+  --terra:#C08457; --line:rgba(43,42,38,.12);
+  --shadow:0 18px 50px -22px rgba(44,61,53,.45);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:.2px}
+h1{font-size:clamp(2.6rem,6vw,4.6rem)}
+h2{font-size:clamp(2rem,4vw,3rem)}
+h3{font-size:1.35rem}
+em{font-style:italic;color:var(--gold-d)}
+.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;font-weight:600;color:var(--gold-d);margin-bottom:18px}
+.section{padding:clamp(70px,9vw,120px) 0}
+.section__head{max-width:680px;margin:0 auto clamp(40px,5vw,64px);text-align:center}
+.section__intro{margin-top:20px;color:var(--ink-soft);font-size:1.08rem}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:500;font-size:.95rem;padding:15px 30px;border-radius:50px;transition:.3s;cursor:pointer;border:1px solid transparent}
+.btn--primary{background:var(--sage);color:#fff;box-shadow:0 12px 28px -12px rgba(62,84,74,.7)}
+.btn--primary:hover{background:var(--sage-d);transform:translateY(-2px)}
+.btn--ghost{border-color:var(--sage);color:var(--sage)}
+.btn--ghost:hover{background:var(--sage);color:#fff}
+
+/* header */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:.35s}
+.site-header.scrolled{background:rgba(247,242,233,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:12px 0}
+.header__inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand__mark{width:50px;height:56px;display:grid;place-items:center}
+.brand__mark svg{width:100%;height:100%;display:block}
+.brand__mark .w1{fill:var(--sage)}
+.brand__mark .w2{fill:var(--gold)}
+.brand__mark .mono{fill:var(--ink)}
+.brand__text{display:flex;flex-direction:column;line-height:1.15}
+.brand__text strong{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--ink)}
+.brand__text small{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:.92rem;font-weight:400;color:var(--ink);position:relative;transition:.25s}
+.nav a:not(.nav__cta):hover{color:var(--gold-d)}
+.nav a:not(.nav__cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.3s}
+.nav a:not(.nav__cta):hover::after{width:100%}
+.nav__cta{background:var(--gold);color:#fff;padding:10px 22px;border-radius:50px;font-weight:500;transition:.3s}
+.nav__cta:hover{background:var(--gold-d)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.nav-toggle span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+/* hero */
+.hero{position:relative;padding:160px 0 90px;overflow:hidden}
+.hero__bg{position:absolute;inset:0;background:
+   radial-gradient(120% 90% at 85% 0%,rgba(194,160,91,.16),transparent 55%),
+   radial-gradient(90% 80% at 0% 100%,rgba(62,84,74,.12),transparent 60%),
+   linear-gradient(180deg,var(--cream),var(--cream-2));z-index:-1}
+.hero__inner{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero__lead{margin:26px 0 32px;font-size:1.15rem;color:var(--ink-soft);max-width:30em}
+.hero__actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero__signature{margin-top:36px;font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--sage)}
+.hero__signature span{color:var(--gold-d)}
+.hero__media{position:relative}
+.hero__badge{position:absolute;bottom:24px;left:-18px;background:#fff;padding:16px 24px;border-radius:14px;box-shadow:var(--shadow);text-align:center;border:1px solid var(--line)}
+.hero__badge strong{display:block;font-family:var(--serif);font-size:1.35rem;color:var(--sage)}
+.hero__badge span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* portraits */
+.portrait{position:relative;border-radius:18px;overflow:hidden;background:var(--cream-2);box-shadow:var(--shadow)}
+.portrait--hero{aspect-ratio:4/5;max-width:440px;margin-left:auto;border:1px solid rgba(194,160,91,.4)}
+.portrait--frame{aspect-ratio:4/5}
+.portrait img{width:100%;height:100%;object-fit:cover}
+
+/* sobre */
+.sobre__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.sobre__media .portrait{max-width:420px}
+.credentials{list-style:none;margin-top:30px;display:grid;gap:14px}
+.credentials li{display:flex;gap:14px;align-items:flex-start;padding:16px 20px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:.96rem;color:var(--ink-soft)}
+.credentials li span{font-size:1.2rem}
+.sobre p{margin-bottom:16px;color:var(--ink-soft)}
+.sobre h2{margin-bottom:22px}
+
+/* features */
+.terapia{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:38px 30px;text-align:center;transition:.3s}
+.feature:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.feature__icon{font-size:2rem;margin-bottom:16px}
+.feature h3{margin-bottom:10px;color:var(--sage)}
+.feature p{color:var(--ink-soft);font-size:.96rem}
+
+/* steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.step{position:relative;padding:34px 26px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.step__num{font-family:var(--serif);font-size:2.4rem;color:var(--gold);font-weight:600;display:block;margin-bottom:10px}
+.step h3{margin-bottom:10px;font-size:1.15rem;color:var(--sage)}
+.step p{color:var(--ink-soft);font-size:.92rem}
+
+/* benefits */
+.beneficios{background:var(--sage-d);color:#EFEAE0}
+.beneficios .eyebrow{color:var(--gold)}
+.beneficios h2{color:#fff}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.benefit{padding:32px 28px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.04);transition:.3s}
+.benefit:hover{background:rgba(194,160,91,.12);border-color:rgba(194,160,91,.4)}
+.benefit h3{color:var(--gold);margin-bottom:10px}
+.benefit p{color:rgba(239,234,224,.8);font-size:.95rem}
+
+/* alcance */
+.alcance__inner{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(34px,5vw,60px);box-shadow:var(--shadow)}
+.alcance p{color:var(--ink-soft);margin-top:14px}
+.flags{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.flags li{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:400;padding:12px 14px;border-radius:12px;background:var(--cream);border:1px solid var(--line)}
+.flag{font-size:1.5rem}
+
+/* valores */
+.valores{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+.valores__card{max-width:760px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--gold);border-radius:22px;padding:clamp(40px,6vw,70px);box-shadow:var(--shadow)}
+.valores__card p{color:var(--ink-soft);margin:18px auto 26px;max-width:48em}
+.pay{list-style:none;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:34px}
+.pay li{padding:10px 20px;background:var(--cream);border:1px solid var(--line);border-radius:50px;font-size:.9rem}
+
+/* contato */
+.contato__inner{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.contato p{color:var(--ink-soft);margin:18px 0 28px}
+.contato h2{margin-top:6px}
+.contato__links{display:grid;gap:16px;max-width:360px}
+.contact-line{display:flex;align-items:center;gap:16px;padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:14px;transition:.3s}
+.contact-line:hover{transform:translateX(6px);border-color:var(--gold);box-shadow:var(--shadow)}
+.contact-line__ic{font-size:1.5rem}
+.contato__media .portrait{max-width:420px;margin-left:auto}
+
+/* footer */
+.footer{background:var(--sage-d);color:#D9D3C6;padding:54px 0 40px}
+.footer__inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.footer .brand__text strong{color:#fff}
+.footer .brand__text small{color:#D9D3C6}
+.footer .brand__mark .w1{fill:#8AA396}
+.footer .brand__mark .mono{fill:#F7F2E9}
+.footer__note{font-size:.95rem;color:rgba(217,211,198,.85)}
+.footer__credit{font-size:.82rem;color:rgba(217,211,198,.6)}
+.footer__credit a{color:var(--gold);border-bottom:1px solid transparent;transition:.2s}
+.footer__credit a:hover{border-color:var(--gold)}
+
+/* whatsapp float */
+.wa-float{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);z-index:90;transition:.3s;animation:wa-pulse 2.6s infinite}
+.wa-float:hover{transform:scale(1.08)}
+@keyframes wa-pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* reveal anim */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:900px){
+  .nav{position:fixed;inset:0 0 0 auto;width:min(78vw,320px);background:var(--cream);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.35s;box-shadow:-20px 0 60px -30px rgba(0,0,0,.4);padding:40px}
+  .nav.open{transform:none}
+  .nav-toggle{display:flex;z-index:101}
+  .hero__inner,.sobre__grid,.alcance__inner,.contato__inner{grid-template-columns:1fr;gap:40px}
+  .hero__media{order:-1}
+  .portrait--hero,.sobre__media .portrait,.contato__media .portrait{margin:0 auto;max-width:360px}
+  .features,.benefits{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .flags{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){.steps,.flags{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container header__inner">
+    <a href="#inicio" class="brand" aria-label="Tais Eduarda Psicóloga — início">
+      <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg"><g stroke="#9C7E3E" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M32 21 C30 13 26 10 22.5 10"/><path d="M32 21 C34 13 38 10 41.5 10"/><line x1="32" y1="21" x2="32" y2="40"/></g><path class="w1" d="M32 23 C20 7 6 11 9 23 C11 32 24 32 32 25 Z"/><path class="w1" d="M32 27 C22 29 12 37 18 44 C23 48 30 39 32 29 Z" opacity=".82"/><path class="w2" d="M32 23 C44 7 58 11 55 23 C53 32 40 32 32 25 Z"/><path class="w2" d="M32 27 C42 29 52 37 46 44 C41 48 34 39 32 29 Z" opacity=".82"/><text class="mono" x="32" y="69" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="-2">TE</text></svg></span>
+      <span class="brand__text"><strong>Tais Eduarda</strong><small>Psicóloga · Terapia Online</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#terapia">Terapia Online</a>
+      <a href="#como">Como funciona</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#valores">Valores</a>
+      <a href="#contato" class="nav__cta">Agendar conversa</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <p class="eyebrow">Psicóloga · Atendimento online</p>
+        <h1>Descubra aqui o cuidado<br />que seu <em>coração</em> procura</h1>
+        <p class="hero__lead">Um espaço seguro e acolhedor para falar de dores, medos e histórias — sem julgamentos, no seu tempo e onde você se sentir mais confortável.</p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--primary">Quero conversar</a>
+          <a href="#sobre" class="btn btn--ghost">Conheça a Tais</a>
+        </div>
+        <p class="hero__signature">Sua psicóloga. <span>Tão humana quanto você.</span></p>
+      </div>
+      <div class="hero__media reveal">
+        <figure class="portrait portrait--hero" data-photo="img/tais-1.jpeg"><img alt="Tais Eduarda, psicóloga" /></figure>
+        <div class="hero__badge"><strong>Psicanálise</strong><span>& Clínica Contemporânea</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sobre" id="sobre">
+    <div class="container sobre__grid">
+      <div class="sobre__media reveal">
+        <figure class="portrait portrait--frame" data-photo="img/tais-2.jpeg"><img alt="Tais Eduarda em atendimento" /></figure>
+      </div>
+      <div class="sobre__content reveal">
+        <p class="eyebrow">Prazer, sou a Tais</p>
+        <h2>Cuidar da mente é um ato de <em>coragem e amor</em></h2>
+        <p>A terapia é um espaço seguro para falar de dores, medos e histórias, sem julgamentos. Um lugar onde você pode, enfim, respirar e se ouvir.</p>
+        <p>Além da psicologia, sou apaixonada por pets, livros, café e tudo o que envolve mar, sol e natureza. Acredito no poder do simples e da presença.</p>
+        <ul class="credentials">
+          <li><span>🎓</span> Graduada em Psicologia pela UNOESC — Universidade do Oeste de Santa Catarina</li>
+          <li><span>📚</span> Pós-graduada em Psicanálise e Clínica Contemporânea</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section terapia" id="terapia">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Terapia Online</p>
+        <h2>Cuidar de você, mesmo à distância</h2>
+        <p class="section__intro">Atendimento online para adultos que buscam se entender melhor, cuidar da autoestima e viver relações mais saudáveis. Através da tela criamos juntos um espaço acolhedor, com a mesma escuta atenta e de qualidade de um atendimento presencial.</p>
+      </div>
+      <div class="features reveal">
+        <article class="feature"><div class="feature__icon">💻</div><h3>Sessões por videochamada</h3><p>Realizadas em plataforma segura e estável, do conforto da sua casa.</p></article>
+        <article class="feature"><div class="feature__icon">🛋️</div><h3>No seu espaço</h3><p>Participe de um lugar onde se sinta bem, com privacidade e tranquilidade.</p></article>
+        <article class="feature"><div class="feature__icon">🌎</div><h3>De onde você estiver</h3><p>Praticidade para manter o cuidado mesmo com a correria do dia a dia.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section como" id="como">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Simples, do início ao acompanhamento</h2>
+      </div>
+      <ol class="steps reveal">
+        <li class="step"><span class="step__num">01</span><h3>Primeiro contato</h3><p>Você fala comigo pelo WhatsApp e combinamos o melhor horário para a primeira conversa.</p></li>
+        <li class="step"><span class="step__num">02</span><h3>A sessão</h3><p>Por videochamada, num lugar confortável e com boa conexão, para uma escuta sem interrupções.</p></li>
+        <li class="step"><span class="step__num">03</span><h3>Frequência</h3><p>No início, sessões semanais favorecem a continuidade. Com o tempo, podem passar a quinzenais.</p></li>
+        <li class="step"><span class="step__num">04</span><h3>Seu processo</h3><p>Caminhamos juntos no seu ritmo, respeitando o seu tempo e as suas necessidades.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section beneficios" id="beneficios">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Benefícios</p>
+        <h2>O que a terapia pode despertar em você</h2>
+      </div>
+      <div class="benefits reveal">
+        <div class="benefit"><h3>Autoconhecimento</h3><p>Entender melhor seus sentimentos, escolhas e padrões.</p></div>
+        <div class="benefit"><h3>Autoestima</h3><p>Construir uma relação mais gentil e segura consigo mesma.</p></div>
+        <div class="benefit"><h3>Relações saudáveis</h3><p>Vínculos mais leves, com limites e comunicação mais claros.</p></div>
+        <div class="benefit"><h3>Gestão da ansiedade</h3><p>Recursos para lidar com medos, angústias e o excesso de cobrança.</p></div>
+        <div class="benefit"><h3>Acolhimento</h3><p>Um espaço sem julgamentos para falar do que pesa no coração.</p></div>
+        <div class="benefit"><h3>Presença</h3><p>Reencontrar o valor do simples e viver com mais sentido.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alcance reveal">
+    <div class="container alcance__inner">
+      <div>
+        <p class="eyebrow">Onde você estiver</p>
+        <h2>Atendo brasileiros em qualquer fuso horário</h2>
+        <p>Mora fora do Brasil? A terapia online aproxima. Acolho você de onde estiver, no horário que fizer sentido para a sua rotina.</p>
+      </div>
+      <ul class="flags" aria-label="Países atendidos">
+        <li><span class="flag">🇧🇷</span>Brasil</li>
+        <li><span class="flag">🇺🇸</span>EUA</li>
+        <li><span class="flag">🇦🇷</span>Argentina</li>
+        <li><span class="flag">🇵🇹</span>Portugal</li>
+        <li><span class="flag">🇩🇪</span>Alemanha</li>
+        <li><span class="flag">🇮🇹</span>Itália</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section valores" id="valores">
+    <div class="container valores__card reveal">
+      <p class="eyebrow">Valores</p>
+      <h2>Investimento no seu bem-estar</h2>
+      <p>Entre em contato pelo WhatsApp para receber informações sobre os valores do atendimento. O pagamento pode ser feito antes do início de cada sessão ou através de um pacote mensal.</p>
+      <ul class="pay"><li>💠 Pix</li><li>🏦 Transferência bancária</li><li>📅 Sessão avulsa ou pacote mensal</li></ul>
+      <a href="https://wa.me/554988667736?text=Ol%C3%A1%2C%20Tais!%20Gostaria%20de%20saber%20sobre%20os%20valores." class="btn btn--primary" target="_blank" rel="noopener">Consultar valores no WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="section contato" id="contato">
+    <div class="container contato__inner reveal">
+      <div class="contato__text">
+        <p class="eyebrow">Vamos conversar</p>
+        <h2>Entre em contato e <em>vamos conversar!</em></h2>
+        <p>Caso queira iniciar esse processo, estou aqui. Dê o primeiro passo — o cuidado começa por uma conversa.</p>
+        <div class="contato__links">
+          <a href="https://wa.me/554988667736?text=Ol%C3%A1%2C%20Tais!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar." class="contact-line" target="_blank" rel="noopener"><span class="contact-line__ic">📱</span><span><strong>WhatsApp</strong><br />(49) 98866-7736</span></a>
+          <a href="https://www.instagram.com/psi.taiseduarda/" class="contact-line" target="_blank" rel="noopener"><span class="contact-line__ic">📷</span><span><strong>Instagram</strong><br />@psi.taiseduarda</span></a>
+        </div>
+      </div>
+      <div class="contato__media">
+        <figure class="portrait portrait--frame" data-photo="img/tais-3.jpeg"><img alt="Tais Eduarda, psicóloga" /></figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="brand brand--footer">
+      <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 74" xmlns="http://www.w3.org/2000/svg"><g stroke="#9C7E3E" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M32 21 C30 13 26 10 22.5 10"/><path d="M32 21 C34 13 38 10 41.5 10"/><line x1="32" y1="21" x2="32" y2="40"/></g><path class="w1" d="M32 23 C20 7 6 11 9 23 C11 32 24 32 32 25 Z"/><path class="w1" d="M32 27 C22 29 12 37 18 44 C23 48 30 39 32 29 Z" opacity=".82"/><path class="w2" d="M32 23 C44 7 58 11 55 23 C53 32 40 32 32 25 Z"/><path class="w2" d="M32 27 C42 29 52 37 46 44 C41 48 34 39 32 29 Z" opacity=".82"/><text class="mono" x="32" y="69" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="-2">TE</text></svg></span>
+      <span class="brand__text"><strong>Tais Eduarda</strong><small>Psicóloga · Terapia Online</small></span>
+    </div>
+    <p class="footer__note">Atendimento online · Brasileiros no Brasil e no exterior</p>
+    <p class="footer__credit">Desenvolvido por <a href="https://arcariodontologia.com.br" target="_blank" rel="noopener">Michel Arcari</a> · 2025 · Todos os direitos reservados</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/554988667736?text=Ol%C3%A1%2C%20Tais!%20Vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.4 2 7.7L.5 31.5l8-2.1c2.2 1.2 4.8 1.9 7.5 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.3c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.8 1.3 1.3-4.6-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.1 5.8-12.9 12.9-12.9S28.9 8.9 28.9 16 23.1 28.8 16 28.8zm7.1-9.6c-.4-.2-2.3-1.1-2.6-1.3-.3-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.2s1.4 3.7 1.5 4c.2.2 2.7 4.2 6.6 5.9.9.4 1.6.6 2.2.8.9.3 1.7.2 2.4.1.7-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg>
+</a>
+
+<script>
+// Placeholder de retrato (SVG inline). Se houver foto real em data-photo, usa-a; senão mantém o placeholder.
+(function(){
+  var ph = "data:image/svg+xml;utf8," + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">'+
+    '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">'+
+    '<stop offset="0" stop-color="#EFE7D8"/><stop offset="1" stop-color="#D9CDB6"/></linearGradient></defs>'+
+    '<rect width="400" height="500" fill="url(#g)"/>'+
+    '<circle cx="200" cy="200" r="70" fill="#C2A05B" opacity="0.55"/>'+
+    '<path d="M90 470c0-70 50-120 110-120s110 50 110 120z" fill="#3E544A" opacity="0.55"/>'+
+    '<text x="200" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#3E544A">Foto da Tais</text>'+
+    '<text x="200" y="278" text-anchor="middle" font-family="Arial" font-size="12" fill="#5C5950">coloque o arquivo em /img</text>'+
+    '</svg>'
+  );
+  document.querySelectorAll('.portrait[data-photo] img').forEach(function(img){
+    var real = img.closest('.portrait').getAttribute('data-photo');
+    img.src = real;                 // tenta a foto real
+    img.onerror = function(){ this.onerror=null; this.src = ph; }; // cai no placeholder
+  });
+})();
+
+// Header scrolled
+var header = document.getElementById('header');
+window.addEventListener('scroll', function(){
+  header.classList.toggle('scrolled', window.scrollY > 30);
+});
+
+// Mobile nav
+var toggle = document.getElementById('navToggle'), nav = document.getElementById('nav');
+toggle.addEventListener('click', function(){
+  var open = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+});
+nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); }); });
+
+// Reveal on scroll
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+}, {threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

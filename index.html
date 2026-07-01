@@ -12,9 +12,10 @@
 <style>
 :root{
   --cream:#F7F2E9; --cream-2:#EFE7D8; --ink:#2B2A26; --ink-soft:#5C5950;
-  --sage:#3E544A; --sage-d:#2C3D35; --gold:#C2A05B; --gold-d:#9C7E3E;
+  --sage:#3F5D68; --sage-d:#2A454E; --gold:#C2A05B; --gold-d:#9C7E3E;
+  --blue-soft:#6F9EAC;
   --terra:#C08457; --line:rgba(43,42,38,.12);
-  --shadow:0 18px 50px -22px rgba(44,61,53,.45);
+  --shadow:0 18px 50px -22px rgba(42,69,78,.45);
   --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
   --wrap:1180px;
 }
@@ -36,7 +37,7 @@ em{font-style:italic;color:var(--gold-d)}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:500;font-size:.95rem;padding:15px 30px;border-radius:50px;transition:.3s;cursor:pointer;border:1px solid transparent}
-.btn--primary{background:var(--sage);color:#fff;box-shadow:0 12px 28px -12px rgba(62,84,74,.7)}
+.btn--primary{background:var(--sage);color:#fff;box-shadow:0 12px 28px -12px rgba(63,93,104,.7)}
 .btn--primary:hover{background:var(--sage-d);transform:translateY(-2px)}
 .btn--ghost{border-color:var(--sage);color:var(--sage)}
 .btn--ghost:hover{background:var(--sage);color:#fff}
@@ -48,7 +49,7 @@ em{font-style:italic;color:var(--gold-d)}
 .brand{display:flex;align-items:center;gap:12px}
 .brand__mark{width:50px;height:56px;display:grid;place-items:center}
 .brand__mark svg{width:100%;height:100%;display:block}
-.brand__mark .w1{fill:var(--sage)}
+.brand__mark .w1{fill:var(--blue-soft)}
 .brand__mark .w2{fill:var(--gold)}
 .brand__mark .mono{fill:var(--ink)}
 .brand__text{display:flex;flex-direction:column;line-height:1.15}
@@ -68,7 +69,7 @@ em{font-style:italic;color:var(--gold-d)}
 .hero{position:relative;padding:160px 0 90px;overflow:hidden}
 .hero__bg{position:absolute;inset:0;background:
    radial-gradient(120% 90% at 85% 0%,rgba(194,160,91,.16),transparent 55%),
-   radial-gradient(90% 80% at 0% 100%,rgba(62,84,74,.12),transparent 60%),
+   radial-gradient(90% 80% at 0% 100%,rgba(111,158,172,.20),transparent 60%),
    linear-gradient(180deg,var(--cream),var(--cream-2));z-index:-1}
 .hero__inner{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
 .hero__lead{margin:26px 0 32px;font-size:1.15rem;color:var(--ink-soft);max-width:30em}
@@ -150,7 +151,7 @@ em{font-style:italic;color:var(--gold-d)}
 .footer__inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
 .footer .brand__text strong{color:#fff}
 .footer .brand__text small{color:#D9D3C6}
-.footer .brand__mark .w1{fill:#8AA396}
+.footer .brand__mark .w1{fill:#8FB8C4}
 .footer .brand__mark .mono{fill:#F7F2E9}
 .footer__note{font-size:.95rem;color:rgba(217,211,198,.85)}
 .footer__credit{font-size:.82rem;color:rgba(217,211,198,.6)}
@@ -359,8 +360,8 @@ em{font-style:italic;color:var(--gold-d)}
     '<stop offset="0" stop-color="#EFE7D8"/><stop offset="1" stop-color="#D9CDB6"/></linearGradient></defs>'+
     '<rect width="400" height="500" fill="url(#g)"/>'+
     '<circle cx="200" cy="200" r="70" fill="#C2A05B" opacity="0.55"/>'+
-    '<path d="M90 470c0-70 50-120 110-120s110 50 110 120z" fill="#3E544A" opacity="0.55"/>'+
-    '<text x="200" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#3E544A">Foto da Tais</text>'+
+    '<path d="M90 470c0-70 50-120 110-120s110 50 110 120z" fill="#3F5D68" opacity="0.55"/>'+
+    '<text x="200" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#3F5D68">Foto da Tais</text>'+
     '<text x="200" y="278" text-anchor="middle" font-family="Arial" font-size="12" fill="#5C5950">coloque o arquivo em /img</text>'+
     '</svg>'
   );
